@@ -1,4 +1,4 @@
-a=0
+a=71
 
 declare -a dataSet=("breast-cancer.arff"
 	"EEGEyeState.arff"
@@ -13,13 +13,14 @@ declare -a classifierAlgo=("weka.classifiers.trees.J48 -- -C 0.25 -M 2"
 	"weka.classifiers.trees.DecisionStump"
 	"weka.classifiers.functions.Logistic -- -R 1.0E-8 -M -1"
 )
-declare -a iter=("30"
-	"100"
+declare -a iter=(
+	#"30"
+	#"100"
 	"150"
 )
 
 
-wekaPath="../weka-3-6-12/weka.jar"
+wekaPath="./weka.jar"
 
 for i in "${iter[@]}"
 do
